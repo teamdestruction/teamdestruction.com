@@ -10,32 +10,44 @@ body,html
     --accent: #a09676;
 
     background-color: var(--background);
+
+    font-family: "Martian Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.ul_navbar
+.nav_ul
 {
     list-style-type: none;
+    height: 50;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: var(--primary);
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: normal;
 }
 
-.li_navbar
+.nav_ul li
 {
     float: left;
 }
 
-.a_navbar
+.nav_ul img
+{
+    float: right;
+}
+
+.nav_ul li a
 {
     display: block;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 14px 16px;
     text-decoration: none;
-}
-
-.a_navbar:hover
-{
-    background-color: var(--background);
 }
