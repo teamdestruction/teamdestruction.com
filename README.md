@@ -1,2 +1,0 @@
-# teamdestruction.github.io
-webpage

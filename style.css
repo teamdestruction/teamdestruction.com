@@ -1,53 +1,223 @@
-body,html
-{
-    margin: 0;
-    padding: 0;
-
-    --text: #ffffff;
-    --background: #1b1b1b;
-    --primary: #f54703;
-    --secondary: #655646;
-    --accent: #a09676;
-
-    background-color: var(--background);
-
-    font-family: "Martian Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+:root {
+  --text: #ffffff;
+  --background: #1b1b1b;
+  --primary: #f74802;
+  --secondary: #02aef2;
+  --accent: #f20236;
 }
 
-.nav_ul
-{
-    list-style-type: none;
-    height: 50;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--primary);
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: normal;
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Martian Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  height: 100vh;
+  width: 100vw;
+
+  scroll-behavior: smooth;
 }
 
-.nav_ul li
-{
-    float: left;
+/*NAVBAR*/
+
+.nav-ul {
+  height: 50px;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  list-style-type: none;
+  background-color: var(--primary);
+
+  z-index: 69420;
+  top: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+
+  margin: 0;
+  padding: 0;
 }
 
-.nav_ul img
-{
-    float: right;
+.nav-ul li a {
+  display: block;
+  text-align: center;
+  padding: 0px 22px;
+  text-decoration: none;
+  color: var(--background);
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+
+  user-select: none;
 }
 
-.nav_ul li a
-{
+.nav-ul-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-ul-mobile {
     display: block;
-    color: white;
+  }
+}
+
+.nav-ul li a:hover {
+  font-weight: 600;
+  font-size: 110%;
+}
+
+.nav-ul .links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: normal;
+  height: 50px;
+  width: 100vw;
+}
+
+.nav-ul li img {
+  display: block;
+  text-align: center;
+  width: 30px;
+  padding: 20px;
+  text-decoration: none;
+
+  user-select: none;
+}
+
+/*NAVBAR END*/
+
+/*HEADING*/
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 75vh;
+
+  background: var(--background);
+}
+
+.heading h1 {
+  margin: 0px;
+  text-align: center;
+  font-size: 10vw;
+  color: var(--primary);
+}
+
+/*
+.heading h2{
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    font-size: 1vw;
+    margin: 2vw;
+    color: var(--text);
+}
+*/
+
+.heading .team {
+  font-size: 10vw;
+}
+
+/*HEADING END*/
+
+/*ABOUT*/
+
+.about {
+  background: var(--primary);
+  color: var(--text);
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 6vw;
+}
+
+.about section {
+}
+
+.about h2 {
+  margin: 0px;
+}
+
+.about p {
+  font-size: 2vh;
+  margin-bottom: 0;
+}
+
+/*ABOUT END*/
+
+/*PROJECTS*/
+
+.projects {
+  height: 500px;
+  background: var(--background);
+  color: var(--text);
+}
+
+.projects h1 {
+  text-align: center;
+  font-size: 4vw;
+  margin-top: 0; /*why???*/
+}
+
+.projects p {
+}
+
+/*PROJECTS END*/
+
+.footer {
+  width: 100vw;
+  height: 300px;
+  background: var(--primary);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+}
+
+.footer section {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 25vw;
+}
+
+.footer img {
+  width: 100px;
+  align-self: center;
+}
+
+.footer section a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer section {
+  align-self: center;
+}
+
+.footer section a:hover {
+  font-weight: 600;
+  font-size: 110%;
+}
+
+.contact {
+  font-size: 10px;
 }
